@@ -54,8 +54,8 @@ create the gulp-typescript-closure-compiler task
 gulp.task('build-project', function () {
     var project = tscc.createProject(__dirname);
 
-    project.src()
-           .pipe(tscc(project));
+    return project.src()
+                  .pipe(tscc(project));
 });
 ```
 Invoke the task 
