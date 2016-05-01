@@ -1,7 +1,7 @@
 var fs = require("fs");
 var path = require("path");
 var exec = require("child_process").exec;
-var compilerPath = require.resolve("../typescript-closure-compiler/tscc");
+var compilerPath = require.resolve("typescript-closure-compiler/tscc");
 
 function Compiler(args, files) {
     this.commandArguments = ["node", compilerPath];
