@@ -30,6 +30,7 @@ gulp.task('build-source', function () {
             outFile: "built/output.js"
 			externsOutFile : "externs.js"
 			externs: [
+				"externs/app-externs.d.ts"
 			]
         }));
 });
