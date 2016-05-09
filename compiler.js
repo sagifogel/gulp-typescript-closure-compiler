@@ -3,7 +3,7 @@ var path = require("path");
 var exec = require("child_process").exec;
 var compilerPath = require.resolve("typescript-closure-compiler/tscc");
 
-function Compiler(args, files) {
+function Compiler(args, files, externs) {
     this.commandArguments = ["node", compilerPath];
     
     if (files) {
@@ -12,13 +12,23 @@ function Compiler(args, files) {
         }, this);
     }
     
+    if (externs && externs.length) {
+        this.commandArguments.push("--externs");
+        
+        externs.forEach(function (file) {
+            this.commandArguments.push(file);
+        }, this);
+    }
+    
     if (Array.isArray(args)) {
         this.commandArguments = this.commandArguments.concat(args.slice());
     } 
     else {
-        for (var key in args) {
-            this.commandArguments.push(this.formatArgument(key, args[key]));
-        }
+        Object.keys(args)
+              .filter(function (key) { return key !== "externs"; })
+              .forEach(function (key) {
+                    this.commandArguments.push(this.formatArgument(key, args[key]));
+               }, this);
     }
 }
 

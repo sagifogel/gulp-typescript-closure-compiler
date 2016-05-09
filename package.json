@@ -1,11 +1,11 @@
 {
   "name": "gulp-typescript-closure-compiler",
-  "version": "1.0.6",
+  "version": "1.1.0",
   "description": "A gulp typescript-closure-compiler plugin",
   "dependencies": {
     "gulp-util": "^3.0.7",
     "vinyl-fs" : "^2.2.1",
-    "typescript-closure-compiler": "^1.7.0-beta.3"
+    "typescript-closure-compiler": "^1.7.1-beta.1"
   },
   "main": "index.js",
   "repository": {

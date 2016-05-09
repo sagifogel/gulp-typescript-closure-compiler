@@ -23,11 +23,14 @@ gulp.task('build-source', function () {
     return gulp.src(['src/**/*.ts'])
         .pipe(tscc({
             exportAs: "App",
-	    module: "commonjs",
+	        module: "commonjs",
             entry: "src/app.ts",
             noEmitOnError: true,
             removeComments: true,
             outFile: "built/output.js"
+			externsOutFile : "externs.js"
+			externs: [
+			]
         }));
 });
 ```
