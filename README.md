@@ -21,18 +21,18 @@ create the gulp-typescript-closure-compiler task
 ```javascript
 gulp.task('build-source', function () {
     return gulp.src(['src/**/*.ts'])
-        .pipe(tscc({
-            exportAs: "App",
-	        module: "commonjs",
-            entry: "src/app.ts",
-            noEmitOnError: true,
-            removeComments: true,
-            outFile: "built/output.js"
-			externsOutFile : "externs.js"
-			externs: [
-				"externs/app-externs.d.ts"
-			]
-        }));
+               .pipe(tscc({
+                    exportAs: "App",
+                    module: "commonjs",
+                    entry: "src/app.ts",
+                    noEmitOnError: true,
+                    removeComments: true,
+                    outFile: "built/output.js",
+                    externsOutFile : "externs.js",
+                    externs: [
+                        "externs/app-externs.d.ts"
+                    ]
+                }));
 });
 ```
 Invoke the task 

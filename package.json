@@ -1,6 +1,6 @@
 {
   "name": "gulp-typescript-closure-compiler",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A gulp typescript-closure-compiler plugin",
   "dependencies": {
     "gulp-util": "^3.0.7",
