@@ -87,6 +87,10 @@ Invoke the task
 gulp build-project
 ```
 
+## Usage Examples
+
+See an example using `gulp-typescript-closure-compiler` plugin in the [TSFunq](https://github.com/sagifogel/TSFunq) project.
+
 License
 -------
 gulp-typescript-closure-compiler is licensed under the [MIT license](http://opensource.org/licenses/MIT).
